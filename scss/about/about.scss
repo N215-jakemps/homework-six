@@ -1,0 +1,131 @@
+
+
+#app{
+    max-width: $content-width;
+    //min-height: 200px;
+    margin: 0 auto;
+  
+    //background-color: salmon;
+
+    .about{
+        margin-top: 70px;
+        margin-bottom: 108px;
+    
+        font-family: $main-font;
+    
+        .about-header {
+    
+            .header-title{
+                font-weight: bold;
+                font-size: 48px;
+                margin-bottom: -2px;
+            }
+            hr {
+                width: 90px;
+                border: 1px solid;
+            }
+    
+            .header-content{
+                margin-top: 10px;
+                min-height: 96px;
+            }
+    
+        }
+    
+        .about-clientquotes {
+    
+            .quotes-title{
+                font-size: 36px;
+                margin-top: 60px;
+                margin-bottom: -1px;
+            }
+    
+            hr {
+                width: 150px;
+                border: 1px solid;
+    
+                margin-bottom: 10px;
+            }
+    
+            .quotes-person{
+                max-width: 722px;
+                position: relative;
+    
+                display: flex;
+    
+                margin-bottom: 37px;
+    
+                .person-image {
+                    width: 260px;
+                    height: 150px;
+                    overflow: hidden;
+    
+                    margin-right: 21px;
+    
+                    img{
+                        max-width: 260px;
+                        height: auto;
+                    }
+    
+                }
+    
+                .person-text {
+                    width: 440px;
+                    margin-bottom: 10px;
+                }
+    
+                .person-name{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+    
+                    color: $site-blue;
+                }
+            }
+        }
+    }
+
+}
+@media all and (max-width: 900px) {
+    #app{
+        .about{
+
+            .about-header{
+                text-align: center;
+    
+                hr{
+                    margin: 0 auto;
+                }
+            }
+            .about-clientquotes{
+    
+                text-align: center;
+    
+                hr{
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                }
+    
+                .quotes-person{
+                    flex-direction: column;
+    
+                    .person-image{
+                        margin: 0 auto;
+    
+                        margin-bottom: 10px;
+                    }
+    
+                    .person-text{
+                        margin: 0 auto;
+    
+                        margin-bottom: 10px;
+                    }
+    
+                    .person-name{
+                        right: 45%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+$ImageDir: '../images/';
+
+
+@mixin place ($bgImage){
+    .place{
+       
+        background-image:linear-gradient(rgba($site-black, .4),rgba($site-black, .4)), url(#{$ImageDir}#{$bgImage});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        margin: 55px;
+
+        height: 304px;
+        width: 236px;
+        background-color: darkgrey;
+
+        z-index: 99;
+
+        position: relative;
+
+        .tour-place-text{
+            color: $site-white;
+            text-align: center;
+
+            height: 60px;
+            width: 224px;
+
+            position: absolute;
+
+            top: 56px;
+
+            font-size: $large-font-size;
+        }
+
+        .tour-place-price{
+
+            color: $site-white;
+
+            height: 60px;
+            width: 236px;
+            text-align: center;
+            font-size: $small-font-size;
+
+            position: absolute;
+
+            top: 120px;
+        }
+
+        .tour-place-button{
+           //@include site-button(20px 0 5px 2px, 20px 20px);
+
+           background-color: $site-blue;
+    
+           position: absolute;
+
+           top: 208px;
+           left: 52px;
+   
+           width: 133px;
+           height: 40px;
+   
+           border: none;
+           color: $site-white;
+           border-radius: $button-radius;
+
+           cursor: pointer;
+        }
+    }
+}
+
+@mixin tour-image ($bgImage){
+    height: 347px;
+    width: 298px;
+
+    // margin-left: 42px;
+
+    background-color: green;
+
+    background-image: url( #{$ImageDir}#{$bgImage});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin site-button {
+   button{
+        //position: absolute;
+    display: block;
+    margin: $center;
+
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    background-color: $site-blue;
+
+    // top: 367px;
+    // left: 574.7px;
+
+    width: 121px;
+    height: 40px;
+
+    text-align: center;
+    border: none;
+    color: $site-white;
+    border-radius: $button-radius;
+
+    &:hover{
+        cursor: pointer;
+    }
+   }
+}
